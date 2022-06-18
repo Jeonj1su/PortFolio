@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
+  </head>
+  <body>
+    <div>
+      <section id="wrap">
+        <header>
+          <span id="darkMode" class="whiteFont fontsize2rem">DARK</span>
+        </header>
+        <div id="smallCircle"></div>
+        <div class="fontsize15rem whiteFont bold subject">Hi,</div>
+        <div class="fontsize10rem whiteFont bold subject line80">
+          I'M J.JISU
+        </div>
+        <div id="bigCircle" data-id="jisu"></div>
+      </section>
+      <section>
+        <div class="whiteFont fontsize5rem centerTextBox10 bold">
+          JISU'S PORTFOLIO
+        </div>
+        <div
+          id="aboutme"
+          class="fontsize5rem centerTextBox10 bold whiteBackground"
+        >
+          ABOUT ME
+        </div>
+        <div>
+          <p class="fontsize5rem whiteFont bold subject">SKILLS</p>
+          <div class="flexAlignStart">
+            <div class="whiteBoxWidth whiteBox17rem"></div>
+            <div>
+              <div class="whiteBoxWidth whiteBox7rem"></div>
+              <div class="whiteBoxWidth whiteBox13rem"></div>
+            </div>
+            <div class="whiteBoxWidth whiteBox13rem"></div>
+            <div class="whiteBoxWidth whiteBox20rem"></div>
+          </div>
+        </div>
+      </section>
+      <section class="flexCenter">
+        <div id="projectBox" class="whiteBackground flexCenter">PROJECT 01</div>
+      </section>
+      <section>
+        <div class="whiteFont fontsize5rem bold subject contact">
+          Contact ME
+        </div>
+        <div class="footer whiteBackground"></div>
+      </section>
+    </div>
+    <script>
+      window.onload = function () {
+        console.log(
+          document.getElementById("bigCircle").getAttribute("data-id")
+        );
+
+        console.log(document.getElementById("bigCircle").getAttribute("class"));
+
+        document.documentElement.setAttribute("color-theme", "blue");
+        //최상위 root에 이 속성을 셋팅해준다
+
+        let darkMode = document.getElementById("darkMode");
+        darkMode.addEventListener("click", (e) => {
+          if (e.target.innerText === "DARK") {
+            document.documentElement.setAttribute("color-theme", "dark");
+            e.target.innerText = "BLUE";
+          } else {
+            document.documentElement.setAttribute("color-theme", "blue");
+            e.target.innerText = "DARK";
+          }
+        });
+      };
+    </script>
+  </body>
+</html>
