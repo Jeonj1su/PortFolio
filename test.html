@@ -15,7 +15,7 @@
           <span id="darkMode" class="whiteFont fontsize2rem">DARK</span>
         </header>
         <div id="smallCircle"></div>
-        <div class="fontsize15rem whiteFont bold subject">Hi,</div>
+        <div class="fontsize15rem whiteFont bold subject">Hello,</div>
         <div class="fontsize10rem whiteFont bold subject line80">
           I'M J.JISU
         </div>
@@ -27,7 +27,7 @@
         </div>
         <div
           id="aboutme"
-          class="fontsize2rem centerTextBox10 bold whiteBackground"
+          class="fontsize5rem centerTextBox10 bold whiteBackground"
         >
           ABOUT ME
         </div>
@@ -45,7 +45,12 @@
         </div>
       </section>
       <section class="flexCenter">
-        <div id="projectBox" class="whiteBackground flexCenter">PROJECT 01</div>
+        <div id="projectBox" class="whiteBackground flexCenter"></div>
+        <ul>
+          <div class="banner_item">PROJECT 01</div>
+          <div class="banner_item">PROJECT 02</div>
+          <div class="banner_item">PROJECT 03</div>
+        </ul>
       </section>
       <section>
         <div class="whiteFont fontsize5rem bold subject contact">
@@ -62,16 +67,16 @@
 
         console.log(document.getElementById("bigCircle").getAttribute("class"));
 
-        document.documentElement.setAttribute("color-theme", "skyblue");
+        document.documentElement.setAttribute("color-theme", "pink");
         //최상위 root에 이 속성을 셋팅해준다
 
         let darkMode = document.getElementById("darkMode");
         darkMode.addEventListener("click", (e) => {
           if (e.target.innerText === "DARK") {
             document.documentElement.setAttribute("color-theme", "dark");
-            e.target.innerText = "SKYBLUE";
+            e.target.innerText = "PINK";
           } else {
-            document.documentElement.setAttribute("color-theme", "skyblue");
+            document.documentElement.setAttribute("color-theme", "pink");
             e.target.innerText = "DARK";
           }
         });
